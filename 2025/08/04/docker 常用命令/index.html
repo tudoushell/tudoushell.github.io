@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | 懒人在路上</title>
+  <title>Docker 常用命令 | 懒人在路上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实早想搭建博客了，只是一直没有时间，主要是懒，以前写的技术型文章都在朋友博客里，有时间在再整理一下，发布到这里;还有几个月要毕业了，博客算是一个新的开始吧，以后所见所想所学都会记录在博客里，算是自己一块领地吧。 感谢Litten提供的Yilia主题，主题比较简洁，色调不错。">
+  <meta name="description" content="梳理并总结日常使用的 Docker 命令 镜像操作命令 检索  1docker search 镜像  下载  1docker pull 镜像  查看镜像列表  1docker images  删除镜像  1docker rmi 镜像名&#x2F;ID  加载镜像  1234 docker load [OPTIONS]  -i, --input string   Read from tar archive f">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/04/21/hello-world/index.html">
+<meta property="og:title" content="Docker 常用命令">
+<meta property="og:url" content="http://yoursite.com/2025/08/04/docker%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="懒人在路上">
-<meta property="og:description" content="其实早想搭建博客了，只是一直没有时间，主要是懒，以前写的技术型文章都在朋友博客里，有时间在再整理一下，发布到这里;还有几个月要毕业了，博客算是一个新的开始吧，以后所见所想所学都会记录在博客里，算是自己一块领地吧。 感谢Litten提供的Yilia主题，主题比较简洁，色调不错。">
+<meta property="og:description" content="梳理并总结日常使用的 Docker 命令 镜像操作命令 检索  1docker search 镜像  下载  1docker pull 镜像  查看镜像列表  1docker images  删除镜像  1docker rmi 镜像名&#x2F;ID  加载镜像  1234 docker load [OPTIONS]  -i, --input string   Read from tar archive f">
 <meta property="og:locale">
-<meta property="og:image" content="https://images.unsplash.com/photo-1547532182-bf296f6be875?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
-<meta property="article:published_time" content="2019-04-21T11:04:55.000Z">
-<meta property="article:modified_time" content="2025-07-23T00:52:57.291Z">
+<meta property="og:image" content="http://yoursite.com/images/250804/dockerfile.png">
+<meta property="og:image" content="http://yoursite.com/images/250804/dockerfile2.png">
+<meta property="article:published_time" content="2025-08-04T06:17:47.000Z">
+<meta property="article:modified_time" content="2025-08-04T07:33:05.811Z">
 <meta property="article:author" content="懒人在路上">
-<meta property="article:tag" content="杂谈">
+<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1547532182-bf296f6be875?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
+<meta name="twitter:image" content="http://yoursite.com/images/250804/dockerfile.png">
   
     <link rel="alternative" href="/atom.xml" title="懒人在路上" type="application/atom+xml">
   
@@ -147,29 +148,205 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-docker 常用命令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Docker 常用命令
     </h1>
   
 
         
-        <a href="/2019/04/21/hello-world/" class="archive-article-date">
-  	<time datetime="2019-04-21T11:04:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-21</time>
+        <a href="/2025/08/04/docker%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2025-08-04T06:17:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://images.unsplash.com/photo-1547532182-bf296f6be875?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="风景"></p>
-<p>其实早想搭建博客了，只是一直没有时间，主要是懒，以前写的技术型文章都在朋友博客里，有时间在再整理一下，发布到这里;还有几个月要毕业了，博客算是一个新的开始吧，以后所见所想所学都会记录在博客里，算是自己一块领地吧。</p>
-<p>感谢<em><strong>Litten</strong></em>提供的<em><strong>Yilia</strong></em>主题，主题比较简洁，色调不错。</p>
+        <p><strong>梳理并总结日常使用的 Docker 命令</strong></p>
+<h2 id="镜像操作命令"><a href="#镜像操作命令" class="headerlink" title="镜像操作命令"></a>镜像操作命令</h2><ul>
+<li>检索</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search 镜像</span><br></pre></td></tr></table></figure>
+<ul>
+<li>下载</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull 镜像</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看镜像列表</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除镜像</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi 镜像名/ID</span><br></pre></td></tr></table></figure>
+<ul>
+<li>加载镜像</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> docker load [OPTIONS]</span><br><span class="line">  -i, --input string   Read from tar archive file, instead of STDIN</span><br><span class="line">  -q, --quiet          Suppress the load output</span><br><span class="line">docker load -i test.tar</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="容器操作命令"><a href="#容器操作命令" class="headerlink" title="容器操作命令"></a>容器操作命令</h2><ul>
+<li>容器运行</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run 相关参数</span><br><span class="line">-p 主机端口:容器端口</span><br><span class="line">-v 主机目录：容器目录</span><br><span class="line">-e 容器服务配置参数</span><br><span class="line">-d 后台运行</span><br><span class="line">--name 容器命名</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器查看</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器停止</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop container name</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器启动</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start container name</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器重启</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker restart container name</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器状态<br>可以查看内存、cpu等使用情况</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器日志</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs container name</span><br></pre></td></tr></table></figure>
+<ul>
+<li>进入容器</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it container name /bin/bash</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器删除</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm container name</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器复制</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker cp [OPTIONS] SRC_PATH CONTAINER:DEST_PATH</span><br><span class="line">docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH</span><br></pre></td></tr></table></figure>
+<p>从容器复制文件到宿主机</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp my_container:/path/in/container /path/on/host</span><br></pre></td></tr></table></figure>
+<p>从宿主机复制文件到容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp /path/on/host my_container:/path/in/container</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器提交</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]</span><br><span class="line">docker commit -a &quot;elliot&quot; -m &quot;test&quot;  3f4e86d6e1ba test:1.0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>容器保存</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker save [OPTIONS] IMAGE [IMAGE...]</span><br><span class="line">docker save -o alist-189.tar alist-189:1.0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>卷映射<br>可以容器启动时使用，将容器中的配置文件挂载到本地目录中<br>-v config:&#x2F;user&#x2F;config<br>其中config 目录默认存在: <code>/var/lib/docker/volumes/&lt;volume-name&gt;</code></li>
+<li>查看卷映射</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume -ls</span><br></pre></td></tr></table></figure>
+<h2 id="分享镜像，上传至Docker-Hub"><a href="#分享镜像，上传至Docker-Hub" class="headerlink" title="分享镜像，上传至Docker Hub"></a>分享镜像，上传至Docker Hub</h2><ul>
+<li>登录docker hub</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重命名镜像名<br>用户名（docker hub的用户名）&#x2F;镜像名</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag test/test:latest dockerhub用户名/test:1.0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>上传到Docker Hub</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push dockerhub用户名/test:1.0</span><br></pre></td></tr></table></figure>
+<h2 id="自定义网络"><a href="#自定义网络" class="headerlink" title="自定义网络"></a>自定义网络</h2><p>创建网络</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create 网络名</span><br></pre></td></tr></table></figure>
+<h2 id="Compose"><a href="#Compose" class="headerlink" title="Compose"></a>Compose</h2><blockquote>
+<p>Docker Compose 让你通过一个 YML 文件，轻松启动多个服务，比如 Web 服务、数据库、缓存等。</p>
+</blockquote>
+<ul>
+<li>示例<br>参数配置文档<br><a href="https://docs.docker.com/reference/compose-file/">https://docs.docker.com/reference/compose-file/</a></li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">blog</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">    <span class="attr">mysql:</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">mysql:latest</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">mysql-blog</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="number">3306</span><span class="string">:3306</span></span><br><span class="line">        <span class="attr">networks:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">blog</span></span><br><span class="line">        <span class="attr">environment:</span></span><br><span class="line">            <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">qwe123</span></span><br><span class="line">            <span class="attr">MYSQL_DATABASE:</span> <span class="string">wordpress</span></span><br><span class="line">    <span class="attr">wordpress:</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">wordpress:latest</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">wordpress-blog</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">        <span class="attr">networks:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">blog</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">        <span class="attr">environment:</span></span><br><span class="line">            <span class="attr">WORDPRESS_DB_NAME:</span> <span class="string">wordpress</span></span><br><span class="line">            <span class="attr">WORDPRESS_DB_CHARSET:</span> <span class="string">utf8</span></span><br><span class="line">            <span class="attr">WORDPRESS_DB_COLLATE:</span> <span class="string">utf8_general_ci</span></span><br><span class="line">            <span class="attr">WORDPRESS_DB_HOST:</span> <span class="string">mysql-blog</span></span><br><span class="line">            <span class="attr">WORDPRESS_DB_USER:</span> <span class="string">root</span></span><br><span class="line">            <span class="attr">WORDPRESS_DB_PASSWORD:</span> <span class="string">qwe123</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动compose文件中的服务</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker compose [OPTIONS] COMMAND</span><br><span class="line">后台起动服务</span><br><span class="line">docker compose -f compose.yaml up -d</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除并移除容器</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose -f compose.yaml down</span><br></pre></td></tr></table></figure>
+<h2 id="DockerFile-制作镜像"><a href="#DockerFile-制作镜像" class="headerlink" title="DockerFile 制作镜像"></a>DockerFile 制作镜像</h2><blockquote>
+<p>Dockerfile 是一个文本文件，其中包含了一组指令（命令），这些指令定义了如何构建一个 Docker 镜像。</p>
+</blockquote>
+<p><a href="https://docs.docker.com/reference/dockerfile/">https://docs.docker.com/reference/dockerfile/</a></p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>FROM</code></td>
+<td>基础镜像，比如 <code>ubuntu</code>, <code>node</code>, <code>openjdk</code> 等</td>
+</tr>
+<tr>
+<td><code>WORKDIR</code></td>
+<td>设置工作目录</td>
+</tr>
+<tr>
+<td><code>COPY</code></td>
+<td>把宿主机文件复制进镜像中</td>
+</tr>
+<tr>
+<td><code>RUN</code></td>
+<td>构建时执行命令（如 <code>RUN apt install ...</code>）</td>
+</tr>
+<tr>
+<td><code>CMD</code> 或 <code>ENTRYPOINT</code></td>
+<td>容器启动时执行的命令</td>
+</tr>
+<tr>
+<td><code>EXPOSE</code></td>
+<td>声明容器监听的端口（文档作用）</td>
+</tr>
+<tr>
+<td><code>LABEL</code></td>
+<td>自定义标签</td>
+</tr>
+<tr>
+<td><code>ENV</code></td>
+<td>环境变量</td>
+</tr>
+<tr>
+<td><code>ADD</code></td>
+<td>添加文件到镜像</td>
+</tr>
+<tr>
+<td><code>VOLUME</code></td>
+<td>数据卷</td>
+</tr>
+<tr>
+<td><code>USER</code></td>
+<td>指定用户和用户组</td>
+</tr>
+<tr>
+<td><code>ARG</code></td>
+<td>指定构建参数</td>
+</tr>
+</tbody></table>
+<ul>
+<li>制作镜像示例</li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">17</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">LABEL</span><span class="language-bash"> author=elliot</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> ./langchain4j-chat-mcp-1.0-SNAPSHOT.jar /langchain4j-chat-mcp-1.0-SNAPSHOT.jar</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">9014</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"> [<span class="string">&quot;java&quot;</span>,<span class="string">&quot;-jar&quot;</span>,<span class="string">&quot;/langchain4j-chat-mcp-1.0-SNAPSHOT.jar&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+<p>构建命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f Dockerfile -t langchain4j-mcp:1.0 .</span><br></pre></td></tr></table></figure>
+
+<h2 id="DockerFile-镜像分层机制"><a href="#DockerFile-镜像分层机制" class="headerlink" title="DockerFile 镜像分层机制"></a>DockerFile 镜像分层机制</h2><ul>
+<li>镜像与容器的关系<br><img src="/images/250804/dockerfile.png" alt="dockerfile"></li>
+<li>多个容器与镜像的关系<br><img src="/images/250804/dockerfile2.png" alt="dockerfile2"></li>
+</ul>
 
       
 
@@ -183,7 +360,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
         		</li>
       		
 		</ul>
@@ -239,7 +416,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/21/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2025/08/04/docker%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -253,15 +430,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/29/Lombok%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Lombok学习
-        
-      </div>
-    </a>
   
+    <a href="/2025/07/23/LangChain4j-for-java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LangChain4j For Java</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
