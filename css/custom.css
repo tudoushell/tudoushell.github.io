@@ -66,3 +66,22 @@ article.article .content tbody tr {
 article.article .content tbody tr:hover {
   background-color: #f5f7fa !important;
 }
+article.article .content .highlight table {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  margin: 0 !important;
+}
+article.article .content .article-entry .highlight {
+  margin: 1.5em 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+article.article .content .article-entry figure.highlight {
+  margin: 1.5em 0 !important;
+}
+article.article .content td.gutter {
+  width: 3em !important;
+  min-width: 3em !important;
+  max-width: 3em !important;
+}
