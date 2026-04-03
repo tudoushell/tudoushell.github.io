@@ -136,4 +136,38 @@
         $mask.on('click', toggleToc);
         $('.navbar-main .catalogue').on('click', toggleToc);
     }
+
 }(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings));
+
+// Fix for scroll event handler errors with browser extensions
+// This fixes the "e.target.contains is not a function" error
+(function() {
+    'use strict';
+    
+    // Patch EventTarget.prototype.contains to handle edge cases
+    if (typeof EventTarget !== 'undefined' && EventTarget.prototype.contains) {
+        const originalContains = EventTarget.prototype.contains;
+        EventTarget.prototype.contains = function(node) {
+            if (!node) return false;
+            // If node is not an Element, try to get its parent element
+            if (node.nodeType !== 1) { // Not an Element node (1 = ELEMENT_NODE)
+                node = node.parentElement || (node.parentNode && node.parentNode.nodeType === 1 ? node.parentNode : null);
+            }
+            if (!node || node.nodeType !== 1) return false;
+            try {
+                return originalContains.call(this, node);
+            } catch (e) {
+                return false;
+            }
+        };
+    }
+    
+    // Add a global error handler for uncaught errors in event handlers
+    window.addEventListener('error', function(e) {
+        if (e.message && e.message.includes('contains is not a function')) {
+            // Suppress this specific error as we've patched it
+            e.preventDefault();
+            return true;
+        }
+    }, true);
+}());

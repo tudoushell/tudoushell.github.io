@@ -1,0 +1,68 @@
+/* 优化文章标题样式 */
+article.article .content h1 {
+  font-size: 2em !important;
+  font-weight: 700 !important;
+  color: #2c3e50 !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.8em !important;
+  padding-bottom: 0.3em !important;
+  border-bottom: 3px solid #3273dc !important;
+  line-height: 1.4 !important;
+}
+article.article .content h2 {
+  font-size: 1.65em !important;
+  font-weight: 600 !important;
+  color: #34495e !important;
+  margin-top: 1.3em !important;
+  margin-bottom: 0.7em !important;
+  padding-left: 0.8em !important;
+  border-left: 5px solid #3273dc !important;
+  line-height: 1.4 !important;
+}
+article.article .content h3 {
+  font-size: 1.4em !important;
+  font-weight: 600 !important;
+  color: #4a5f7f !important;
+  margin-top: 1.2em !important;
+  margin-bottom: 0.6em !important;
+  padding-left: 0.6em !important;
+  border-left: 4px solid #48c774 !important;
+  line-height: 1.3 !important;
+}
+article.article .content h4 {
+  font-size: 1.2em !important;
+  font-weight: 600 !important;
+  color: #5a6c84 !important;
+  margin-top: 1em !important;
+  margin-bottom: 0.5em !important;
+}
+article.article .content table {
+  width: 100% !important;
+  margin: 1.5em 0 !important;
+  border-collapse: collapse !important;
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+}
+article.article .content thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+article.article .content th {
+  padding: 12px 15px !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  font-size: 0.95em !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+article.article .content td {
+  padding: 12px 15px !important;
+  border: 1px solid #ddd !important;
+  color: #333 !important;
+  font-size: 0.9em !important;
+}
+article.article .content tbody tr {
+  transition: background-color 0.2s ease !important;
+}
+article.article .content tbody tr:hover {
+  background-color: #f5f7fa !important;
+}
